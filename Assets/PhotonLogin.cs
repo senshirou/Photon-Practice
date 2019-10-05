@@ -45,12 +45,15 @@ public class PhotonLogin : MonoBehaviourPunCallbacks {
 	//ルーム作成して入室に成功したときに呼び出される。
 	public override void OnJoinedRoom()
 	{
-		Room myroom = PhotonNetwork.CurrentRoom;
-		Photon.Realtime.Player player = PhotonNetwork.LocalPlayer;
+		//Room型とPlayer型の指定。
+		Room myroom = PhotonNetwork.CurrentRoom;　//myroom変数にPhotonnetworkの部屋の現在状況を入れる。
+		Photon.Realtime.Player player = PhotonNetwork.LocalPlayer;　//playerをphotonnetworkのローカルプレイヤーとする
 		Debug.Log("ルーム名:" + myroom.Name);
 		Debug.Log("PlayerNo" + player.ActorNumber);
 		Debug.Log("プレイヤーID" + player.UserId);
 		
+
+		//この部分はニックネームを決めるためのもので、入力は不要です。
 		if(player.ActorNumber  == 1)
 		{
 			player.NickName = "わたしは1です";
@@ -75,12 +78,7 @@ public class PhotonLogin : MonoBehaviourPunCallbacks {
 		Debug.Log("作成失敗");
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-		
-	}
+
 }
 
 }
