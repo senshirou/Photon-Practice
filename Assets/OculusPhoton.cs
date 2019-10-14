@@ -6,10 +6,7 @@ using Photon.Realtime;
 
 public class OculusPhoton : MonoBehaviourPunCallbacks
 {
-   [SerializeField] OVRCameraRig cameraRig;
-   [SerializeField] OVRManager oVR;
-
-   [SerializeField] OVRHeadsetEmulator oVRHeadset;
+   
 
 
     // Start is called before the first frame update
@@ -26,9 +23,7 @@ public class OculusPhoton : MonoBehaviourPunCallbacks
 			return;
 		}
 
-        cameraRig.enabled = true;
-        oVR.enabled = true;
-        oVRHeadset.enabled = true;
+        
 
         
         
